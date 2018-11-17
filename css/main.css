@@ -81,6 +81,8 @@ header {
     font-family: "Lato";
     font-weight: bold;
     line-height: 1.2;
+    letter-spacing: 0.2em;
+    margin-top: 50px;
     text-transform: uppercase;
 }
 
@@ -120,6 +122,21 @@ header {
 
 .col-8 .bike-logo, .col-4 .bike-logo {
     position: absolute;
+}
+
+.line {
+    background-color: rgba(53, 55, 56, 0.2);
+    height: 1px;
+    margin-bottom: 55px;
+    margin-top: 43px;
+    width: 50px;
+}
+
+.triangle {
+    border: 10px solid transparent;
+    border-top: 10px solid #fff;
+    position: absolute;
+    top: 400px;
 }
 
 .vintage-olivia-logo {
