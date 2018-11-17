@@ -12,8 +12,15 @@ img {
 header {
     background-color: #f7f7f7;
     background-image: url("../img/bg/bg_header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
     height: 800px;
-    width: 1600px;
+    max-width: 1600px;
+
 }
 
 .header_menu {
@@ -63,13 +70,13 @@ header {
     height: 469px;
     justify-content: center;
     text-align: center;
-    width: 1600px;
+    max-width: 1600px;
 }
 
 .about-us img {
     height: 43px;
     left: 774px;
-    position: absolute;
+    /*position: absolute;*/
     top: 917px;
     width: 52px;
 }
@@ -97,7 +104,7 @@ header {
 }
 
 .work {
-    width: 1600px;
+    max-width: 1600px;
 }
 
 .row, .work-row {
@@ -117,6 +124,18 @@ header {
     justify-content: center;
     position: relative;
     width: 67.66%;
+}
+
+.col-8 .bike-img, .col-4 .bike-img, .col-4 .bike-img__h100 {
+    width: 100%;
+}
+
+.col-4 .bike-img {
+    height: 200px;
+}
+
+.bike-img__h100 {
+    height: 100%;
 }
 
 .col-8 .bike-logo, .col-4 .bike-logo {
@@ -140,21 +159,22 @@ header {
 
 .vintage-olivia-logo {
     height: 118px;
-    left: 477px;
+    left: calc(50% - 56px);
     top: 241px;
     width: 113px;
 }
 
 .la-boriosa-logo {
     height: 152px;
-    left: 445px;
+    left: calc(50% - 83px);
     top: 224px;
     width: 177px;
 }
 
 .m-hulot-logo {
     height: 67px;
-    left: 164px;
+    /*left: 164px;*/
+    left: calc(10%);
     top: 270px;
     width: 208px;
 }
@@ -184,6 +204,7 @@ header {
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
+    overflow: hidden;
 }
 
 .col-4 .bike-description-text {
@@ -227,6 +248,10 @@ header {
     margin: 0;
 }
 
+.shop {
+    height: 534px;
+}
+
 .flex-row {
     align-items: stretch;
     display: flex;
@@ -240,9 +265,19 @@ header {
     width: 33.33%;
 }
 
+.bike-img__w50 {
+    width: 50%;
+    height: 50%;
+}
+
+.bike-img__w100 {
+    width: 100%;
+}
+
 .green-veil {
     background-color: rgba(100, 194, 158, 0.8);
     height: 267px;
+    height: 50%;
     position: absolute;
     right: 0px;
     top: 0px;
@@ -251,7 +286,7 @@ header {
 
 .shop-logo {
     height: 30px;
-    left: 241px;
+    left: calc(50% - 25px);
     position: absolute;
     top: 107px;
     width: 51px;
@@ -262,7 +297,7 @@ header {
     font-family: "Lato";
     font-size: 14px;
     font-weight: bold;
-    left: 218px;
+    left: calc(50% - 38px);
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
@@ -376,7 +411,7 @@ footer p {
 .row .adress {
     box-sizing: border-box;
     justify-content: center;
-    padding-left:250px;
+    padding-left:15%;
 }
 
 .adress p {
