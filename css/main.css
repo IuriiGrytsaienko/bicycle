@@ -9,7 +9,7 @@ img {
     padding: 0;
 }
 
-.header {
+header {
     background-color: #f7f7f7;
     background-image: url("../img/bg/bg_header.jpg");
     height: 800px;
@@ -330,11 +330,11 @@ img {
     width: 400px;
 }
 
-.footer {
+footer {
     height: 250px;
 }
 
-.footer p {
+footer p {
     color: rgb(132, 135, 137);
     font-family: "Lato";
     font-size: 16px;
