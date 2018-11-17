@@ -14,7 +14,6 @@ header {
     background-image: url("../img/bg/bg_header.jpg");
     height: 800px;
     width: 1600px;
-
 }
 
 .header_menu {
@@ -197,7 +196,7 @@ header {
     width: 398px;
 }
 
-.twitter {
+.social-links {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -206,7 +205,7 @@ header {
     text-align: center;
 }
 
-.twitter .twitter-title {
+.social-links .social-title {
     color: rgb(53, 55, 56);
     display: block;
     font-family: "Lato";
@@ -216,7 +215,7 @@ header {
     text-align: center;
 }
 
-.twitter .twitter-text {
+.social-links .social-text {
     color: rgb(132, 135, 137);
     display: inline-block;
     font-family: "Lato";
@@ -225,6 +224,7 @@ header {
     font-style: italic;
     text-align: center;
     width: 1042px;
+    margin: 0;
 }
 
 .flex-row {
@@ -281,15 +281,14 @@ header {
 
 .discover a {
     background-color: rgb(40, 47, 53);
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-width: 1px;
-    color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    color: #ffffff;
     font-family: "Lato";
     font-size: 14px;
     font-weight: bold;
     height: 52px;
     line-height: 52px;
+    letter-spacing: 0.2em;
     opacity: 0.5;
     text-align: center;
     text-decoration: none;
@@ -298,7 +297,7 @@ header {
 }
 
 .button_bg {
-    background-color: rgb(40, 47, 53);
+    background-color: #282f35;
     left: 648px;
     position: absolute;
     top: 4145px;
@@ -376,8 +375,8 @@ footer p {
 
 .row .adress {
     box-sizing: border-box;
-    padding-left:250px;
     justify-content: center;
+    padding-left:250px;
 }
 
 .adress p {
@@ -399,3 +398,97 @@ footer p {
     display: flex;
 }
 
+
+.wrapper {
+    height: 200px;
+    margin: 0 auto 0;
+    position: relative;
+}
+
+.slider {
+    height: inherit;
+    position: relative;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+
+.wrapper > input {
+    display: none;
+}
+
+
+
+.slides {
+    position: absolute;
+}
+
+
+
+
+.wrapper label {
+    cursor: pointer;
+    display: inline-block;
+    height: 8px;
+    margin: 70px 12px 0 16px;
+    position: relative;
+    width: 8px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background ease-in-out .5s;
+    -moz-transition: background ease-in-out .5s;
+    -o-transition: background ease-in-out .5s;
+    transition: background ease-in-out .5s;
+    z-index: 5;
+}
+
+.wrapper label:after {
+    border: 2px solid #ddd;
+    content: " ";
+    display: block;
+    height: 12px;
+    left: -4px;
+    position: absolute;
+    top: -4px;
+    width: 12px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+.wrapper label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3) {
+    background: #ddd;
+}
+
+.slides {
+    height: inherit;
+    opacity: 0;
+    position: absolute;
+    width: inherit;
+    z-index: 0;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    -moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    -o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3 {
+    opacity: 1;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
