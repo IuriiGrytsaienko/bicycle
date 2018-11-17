@@ -344,11 +344,15 @@ header {
     font-style: italic;
     height: 69px;
     line-height: 1.2;
+    padding-left: 28px;
     width: 400px;
 }
 
-footer {
+footer .col-4{
+    align-items: flex-start;
+    display: flex;
     height: 250px;
+    justify-content: center;
 }
 
 footer p {
@@ -369,3 +373,29 @@ footer p {
 .social img, .credits img {
     padding: 0 8px;
 }
+
+.row .adress {
+    box-sizing: border-box;
+    padding-left:250px;
+    justify-content: center;
+}
+
+.adress p {
+     margin: 0;
+     padding: 0;
+ }
+
+.adress p:first-child {
+    font-weight: bold;
+}
+
+.row .social {
+    align-items: center;
+    display: flex;
+}
+
+.row .credits {
+    align-items: center;
+    display: flex;
+}
+
