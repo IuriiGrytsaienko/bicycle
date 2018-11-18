@@ -463,6 +463,32 @@ footer p {
     height: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+
+    .work-row {
+        /** подключает flex-контекст для всех его непосредственных потомков  **/
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        /** Устанавливает главную ось main-axis, определяя тем самым направление для flex-элементов, размещаемых в контейнере.  **/
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+    }
+    .col-8 {
+        /** Задаём порядок - элемент становится третьим  **/
+        order: 1;
+        -webkit-order: 1;
+        -moz-flex-order: 1;
+    }
+
+    .col-4 {
+        /** Задаём порядок - элемент становится первым  **/
+        order: 2;
+        -webkit-order: 2;
+        -moz-flex-order: 2;
+    }
 
 
 
+}
