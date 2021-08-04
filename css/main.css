@@ -20,7 +20,7 @@ header {
     flex-direction: column;
     height: 800px;
     max-width: 1600px;
-
+	background-color: red;
 }
 
 .header_menu {
